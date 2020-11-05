@@ -1,0 +1,42 @@
+
+/* Reset */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  &,
+  &:visited,
+  &:link,
+  &:active {
+    color: $blue;
+    outline: none;
+  }
+}
+/* Layout defaults */
+
+div {
+  box-sizing: border-box;
+}
+
+/* Layout with Atomic styles */
+
+.container {
+  display: block;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+h1 {
+  font-size: 36px;
+  color: $darkBlue;
+}
+
+.text-center {
+  text-align: center;
+}

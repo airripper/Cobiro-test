@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="bold text-center title">{{title}}</h1>
+  <section class="flex listing">
+    <ng-container *ngFor="let item of listing">
+      <app-single-card [item]="item"></app-single-card>
+    </ng-container>
+  </section>
+</div>

@@ -1,0 +1,37 @@
+app-single-card {
+  flex-basis: calc((100% / 3) - 20px);
+  .single-card {
+    flex-direction: column;
+    .image-wrapper {
+      display: block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      @include aspect-ratio(1, 1);
+      //background-size: cover;
+    }
+    .info {
+      padding: 10px 20px;
+      > * {
+        display: block;
+        margin: 5px 0;
+      }
+        .name {
+          font-size: $fontSize-big;
+          color: $darkBlue;
+        }
+        .position {
+          font-size: $fontSize;
+          color: $textGray;
+        }
+        .email {
+          font-size: $fontSize-small;
+          color: $blue;
+        }
+        .tel {
+          font-size: $fontSize;
+          color: $textGray;
+        }
+    }
+  }
+}

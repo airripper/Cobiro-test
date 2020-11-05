@@ -1,0 +1,13 @@
+<div class="mainAlert" *ngIf="messages && messages.length > 0">
+  <div class="wrapper"
+     *ngFor="let message of messages, let ind = index"
+      [ngClass]="{ 'alert': message, 'error': message.type === 'error'}">
+    <div class="container">
+      <div class="content">
+        <p>Something went wrong</p>
+        <p>Try to reload the page or check your connection</p>
+        <pre>{{message.text}}</pre>
+      </div>
+    </div>
+  </div>
+</div>

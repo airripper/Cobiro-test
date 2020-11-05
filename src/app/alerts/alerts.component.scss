@@ -1,0 +1,17 @@
+.mainAlert {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  .content {
+    padding: 10px 20px;
+    background: #d60404;
+    color: #fff;
+    font-size: 20px;
+    pre {
+      padding: 10px 20px;
+      font-size: 10px;
+      background: #333;
+    }
+  }
+}

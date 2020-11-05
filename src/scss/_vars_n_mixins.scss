@@ -1,0 +1,21 @@
+$fontSize: 16px;
+$fontSize-small: 14px;
+$fontSize-big: 22px;
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    min-width: 200px; // Only for this test. 200px is the minimal width of image
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
