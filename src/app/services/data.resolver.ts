@@ -4,15 +4,16 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/rou
 
 import {ApiService} from './api.service';
 import {Observable} from 'rxjs';
+import {Listing} from '../interfaces/data';
 
 @Injectable({ providedIn: 'root' })
-export class DataResolver implements Resolve<any> {
+export class DataResolver implements Resolve<Listing> {
   constructor(private api: ApiService) {}
 
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<any> {
+  ): Observable<Listing> {
     return this.api.getData();
   }
 }

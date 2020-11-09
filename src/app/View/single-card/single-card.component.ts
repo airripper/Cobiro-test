@@ -9,7 +9,7 @@ export class SingleCardComponent {
   imageWide: string;
   imageWH: string;
 
-  @Input() item;
+  @Input() imageUrl;
 
   @HostListener('window:resize', ['$event'])
   onResize() {

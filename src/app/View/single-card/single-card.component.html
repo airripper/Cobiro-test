@@ -1,9 +1,6 @@
 <article class="flex single-card">
-  <div class="image-wrapper" [style.backgroundImage]="'url(' + item.imageUrl[imageWide] + ')'"></div>
+  <div class="image-wrapper" [style.backgroundImage]="'url(' + imageUrl[imageWide] + ')'"></div>
   <div class="info">
-    <div class="name bold"> {{item.block.title}} </div>
-    <div class="position"> {{item.block.description}} </div>
-    <a class="email" [href]="'mailto:' + item.block.link"> {{item.block.link}} </a>
-    <a class="tel" [href]="'tel:' +  item.block.text"> {{item.block.text}} </a>
+   <ng-content></ng-content>
   </div>
 </article>

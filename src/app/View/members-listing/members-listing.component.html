@@ -2,7 +2,12 @@
   <h1 class="bold text-center title">{{title}}</h1>
   <section class="flex listing">
     <ng-container *ngFor="let item of listing">
-      <app-single-card [item]="item"></app-single-card>
+      <app-single-card [imageUrl]="item.imageUrl">
+        <div class="name bold"> {{item.block.title}} </div>
+        <div class="position"> {{item.block.description}} </div>
+        <a class="email" [href]="'mailto:' + item.block.link"> {{item.block.link}} </a>
+        <a class="tel" [href]="'tel:' +  item.block.text"> {{item.block.text}} </a>
+      </app-single-card>
     </ng-container>
   </section>
 </div>

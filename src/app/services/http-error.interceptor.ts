@@ -9,6 +9,7 @@ import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import {Injectable} from '@angular/core';
 import {AlertsService} from './alerts.service';
+import {Data} from '../interfaces/data';
 
 @Injectable({ providedIn: 'root' })
 
@@ -18,7 +19,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
     public alert: AlertsService
   ) {}
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(request: HttpRequest<Data>, next: HttpHandler): Observable<HttpEvent<Data>> {
 
     return next.handle(request)
       .pipe(
